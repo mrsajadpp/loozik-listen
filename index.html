@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- Coding By Saju Talk-->
+<html lang="en">
+<head>
+  <!--Meta charset-->
+  <meta charset="UTF-8">
+  <!--Meta edge-->
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--Meta viewport-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Meta description-->
+  <meta name="description" content="Play music change your life, Powered by loozik">
+  <!--Meta keywords-->
+  <meta name="keywords" content="loozik, music, pushpa, song, fluid" />
+  <!--Title-->
+  <title>loozik</title>
+  <!--Favicon-->
+  <link rel="shortcut icon" href="favicon.png" type="image/png" />
+  <!--Style-->
+  <link rel="stylesheet" href="style.css">
+  <!--Google icon-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <!--Meta author-->
+  <meta name="author" content="Saju Talk" />
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "40d5b54a-bee5-4b8b-a2ba-5b2d990963d5",
+    });
+  });
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-W1K65EZT47"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-W1K65EZT47');
+</script>
+</head>
+<body>
+    <div class="loader">
+    <div class="circle"></div>
+    </div>
+    <script>var loader = document.querySelector(".loader")
+window.addEventListener("load", vanish);
+function vanish() {
+  loader.classList.add("disppear");
+}</script>
+
+  <div class="wrapper">
+    <div class="top-bar">
+      <i class="material-icons" style="display: none">expand_more</i>
+      <p style="display: none">Now Playing</p>
+      <i class="material-icons" style="display: none">more_horiz</i>
+    </div>
+    <div class="img-area">
+      <img src="" alt="loozik">
+    </div>
+    <div class="song-details">
+      <p class="name"></p>
+      <p class="artist"></p>
+    </div>
+    <div class="progress-area">
+      <div class="progress-bar">
+        <audio id="main-audio" src=""></audio>
+      </div>
+      <div class="song-timer">
+        <span class="current-time">0:00</span>
+        <span class="max-duration">0:00</span>
+      </div>
+    </div>
+    <div class="controls">
+      <i id="repeat-plist" class="material-icons" title="Playlist looped">repeat</i>
+      <i id="prev" class="material-icons">skip_previous</i>
+      <div class="play-pause">
+        <i class="material-icons play">play_arrow</i>
+      </div>
+      <i id="next" class="material-icons">skip_next</i>
+      <i id="more-music" class="material-icons">queue_music</i>
+    </div>
+    <div class="music-list">
+      <div class="header">
+        <div class="row">
+          <i class= "list material-icons">queue_music</i>
+          <span>Music list</span>
+        </div>
+        <i id="close" class="material-icons">close</i>
+      </div>
+      <ul>
+        <!-- here li list are coming from js -->
+      </ul>
+    </div>
+  </div>
+  <script src="music-list.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
